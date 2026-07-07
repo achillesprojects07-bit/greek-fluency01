@@ -1,6 +1,6 @@
 # Καθημερινά V14.0.4 — One First Button + Levels Cleanup
 
-V14.0.4 removes competing first actions. Today now has one dominant first button, the 1–5 mastery cards are progress markers only, the worksheet shortcut is removed from Today, and Levels is cleaned so it points back to the guided Today path instead of offering multiple competing actions.
+V14.0.4 removes competing first actions. Today now has one  dominant first button, the 1–5 mastery cards are progress markers only, the worksheet shortcut is removed from Today, and Levels is cleaned so it points back to the guided Today path instead of offering multiple competing actions.
 
 Main tabs:
 - **Today** — assigned daily path and current concept worksheet.
