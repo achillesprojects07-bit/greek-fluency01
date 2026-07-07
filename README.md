@@ -5,7 +5,7 @@ V14.0.4 removes competing first actions. Today now has one dominant first button
 Main tabs:
 - **Today** — assigned daily path and current concept worksheet.
 - **Levels** — mastery ladder with stepping-stone levels and concept atoms.
-- **Library** — study shelves for alphabet/sounds, vocabulary, grammar, dialogues, exam import, settings/backup.
+- **Library** — study shelves for alphabet/sounds, vocabulary, grammar,  dialogues, exam import, settings/backup.
 - **Worksheets** — graded worksheet work with accuracy, wrong-answer correction, and repetition.
 - **Review** — weak spots, due reviews, mistakes, saved recordings, and progress proof.
 
