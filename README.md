@@ -1,11 +1,14 @@
-# Καθημερινά V14.0.4 — One First Button + Levels Cleanup
+# Καθημερινά V14.0.4A — Library Restore Hotfix
 
-V14.0.4 removes competing first actions. Today now has one  dominant first button, the 1–5 mastery cards are progress markers only, the worksheet shortcut is removed from Today, and Levels is cleaned so it points back to the guided Today path instead of offering multiple competing actions.
+This is the stable V14.0.4 pre-Kumon baseline with the Library tab restored. V14.0.4 had a missing `v14LibraryCard()` helper, so the Library renderer could crash and appear empty. V14.0.4A defines the shelf-card helper, keeps the Library mapped to the existing `more` view, and preserves the one-first-button / levels-cleanup behavior.
+
+
+V14.0.4A removes competing first actions. Today now has one dominant first button, the 1–5 mastery cards are progress markers only, the worksheet shortcut is removed from Today, and Levels is cleaned so it points back to the guided Today path instead of offering multiple competing actions.
 
 Main tabs:
 - **Today** — assigned daily path and current concept worksheet.
 - **Levels** — mastery ladder with stepping-stone levels and concept atoms.
-- **Library** — study shelves for alphabet/sounds, vocabulary, grammar,  dialogues, exam import, settings/backup.
+- **Library** — study shelves for alphabet/sounds, vocabulary, grammar, dialogues, exam import, settings/backup.
 - **Worksheets** — graded worksheet work with accuracy, wrong-answer correction, and repetition.
 - **Review** — weak spots, due reviews, mistakes, saved recordings, and progress proof.
 
@@ -62,7 +65,7 @@ V14.0.3 polish:
 - Kept the graded worksheet shortcut, but made it clearly secondary.
 
 
-V14.0.4 One First Button + Levels Cleanup:
+V14.0.4A One First Button + Levels Cleanup:
 - Today has one dominant first action: Start Today’s Path.
 - Study / Practice / Worksheet / Correct / Master are now non-clickable progress markers on Today.
 - Removed the “Jump to today’s worksheet” shortcut from Today.
