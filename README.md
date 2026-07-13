@@ -1,28 +1,28 @@
-# Καθημερινά V14.0.4C — Post-Answer Translation Reveal
+# Καθημερινά V14.0.4D — Unknown Words + Post-Answer Review Queue
 
-Stable pre-Kumon baseline plus a focused listening UX improvement.
+Stable V14.0.4C baseline plus a focused post-answer learning review layer.
 
-## What changed from V14.0.4B
+## What changed from V14.0.4C
 
-- Listening still hides English before answering.
-- After grading a listening step, the app now reveals:
-  - Greek transcript
-  - English meaning
-  - question translations
-  - answer-choice translations
-  - key vocabulary glossary
-- Adds a self-check after correct answers:
-  - I understood the words
-  - I used context
-  - I guessed
-  - Add these words to review
-- Correct-by-context is treated as progress, but not full mastery.
-- Preserves the clean stable V14.0.4B baseline, Library restore, and foundation-first start.
+- English still stays hidden before listening answers.
+- After grading, translation reveal still shows transcript, meaning, question translations, choices, and glossary.
+- Glossary words can now be tapped individually and added to Review.
+- Self-check choices now affect learning honestly:
+  - **I understood the words** = strong pass, no vocabulary queue.
+  - **I used context** = words go to Unknown Words review.
+  - **I guessed** = words go to Unknown Words review and the listening item is pushed back for review.
+  - **Add these words to review** = glossary goes to Unknown Words review.
+- Review tab now includes an **Unknown Words** queue with hear / known / remove actions.
+- Adds a lightweight Unknown Words review flow inside Worksheets.
 
 ## Daily flow remains
 
-Today → Study concept in Library → Start worksheet → Review mistakes.
+Today → Study concept in Library → Start worksheet → Grade → Reveal English → Save unknown words → Review.
+
+## Stability boundary
+
+This build stays on the stable pre-Kumon V14 line. It does not reintroduce V15 routers, heavy mastery locks, or looping navigation.
 
 ## Version
 
-V14.0.4C
+V14.0.4D
