@@ -1,6 +1,6 @@
 # Καθημερινά V14.0.4B — Clean Stable UX Baseline
 
-This is the restored stable pre-Kumon baseline with the Library fixed and the learning ladder corrected to start from the true foundation.
+This is the restored stable pre-Kumon baseline with the Library  fixed and the learning ladder corrected to start from the true foundation.
 
 ## What changed from V14.0.4A
 
