@@ -1,25 +1,28 @@
-# Καθημερινά V14.0.4B — Clean Stable UX Baseline
+# Καθημερινά V14.0.4C — Post-Answer Translation Reveal
 
-This is the restored stable pre-Kumon baseline with the Library  fixed and the learning ladder corrected to start from the true foundation.
+Stable pre-Kumon baseline plus a focused listening UX improvement.
 
-## What changed from V14.0.4A
+## What changed from V14.0.4B
 
-- The first current lesson is now **Greek vowels: α ε ι ο ου**.
-- **γαύρος** is no longer the first lesson. It is later as an integration concept after vowels, stress, syllables, γ/χ, θ/δ, ρ, and αυ/ευ.
-- Library opens with the exact current study lesson, not an empty shelf.
-- Levels is clarified as a roadmap. Chips are topic labels, not fake buttons.
-- Concept sequence cards now include Study lesson and Worksheet actions.
-- Worksheets follow the same current concept as Today and Library.
-- Kept the app light and stable; no V15 router, heavy lock engine, or service-worker stack was added.
+- Listening still hides English before answering.
+- After grading a listening step, the app now reveals:
+  - Greek transcript
+  - English meaning
+  - question translations
+  - answer-choice translations
+  - key vocabulary glossary
+- Adds a self-check after correct answers:
+  - I understood the words
+  - I used context
+  - I guessed
+  - Add these words to review
+- Correct-by-context is treated as progress, but not full mastery.
+- Preserves the clean stable V14.0.4B baseline, Library restore, and foundation-first start.
 
-## Main tabs
+## Daily flow remains
 
-- **Today** — one current concept and daily path.
-- **Levels** — roadmap and concept sequence.
-- **Library** — study lesson first, shelves second.
-- **Worksheets** — answer-work for the current concept.
-- **Review** — weak spots, due reviews, corrections, proof.
+Today → Study concept in Library → Start worksheet → Review mistakes.
 
-## Stability note
+## Version
 
-If the previous version still appears, clear site data once for the new repo URL or hard refresh after deployment.
+V14.0.4C
