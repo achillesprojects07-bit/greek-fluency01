@@ -5,7 +5,7 @@ Stable V14.0.4E baseline plus the new branded Κα + sun app icon pack.
 ## What changed from V14.0.4C
 
 - English still stays hidden before listening answers.
-- After grading, translation reveal still shows transcript, meaning, question translations, choices, and glossary.
+- After grading, translation reveal still shows transcript,  meaning, question translations, choices, and glossary.
 - Glossary words can now be tapped individually and added to Review.
 - Self-check choices now affect learning honestly:
   - **I understood the words** = strong pass, no vocabulary queue.
