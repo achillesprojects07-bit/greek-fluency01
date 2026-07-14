@@ -7,8 +7,8 @@ const readme=fs.readFileSync('README.md','utf8');
 const pkg=fs.readFileSync('package.json','utf8');
 const required=[
   '<title>Καθημερινά</title>',
-  'V14.0.4D',
-  "const APP_VERSION='V14.0.4D'",
+  'V14.0.4F',
+  "const APP_VERSION='V14.0.4F'",
   "const LS='gta_v12_state'",
   'Greek vowels: α ε ι ο ου',
   'Later integration: γ + αυ in γαύρος',
@@ -28,14 +28,14 @@ const required=[
 ];
 const missing=required.filter(x=>!html.includes(x)&&!sw.includes(x)&&!readme.includes(x));
 if(missing.length){console.error('Missing:',missing.join(' | '));process.exit(1)}
-if(!manifest.includes('14.0.4D')){console.error('Manifest version query missing');process.exit(1)}
-if(!sw.includes("const CACHE_NAME='gta-v14-0-4d-unknown-words-review'")){console.error('Service worker cache mismatch');process.exit(1)}
-if(!readme.includes('# Καθημερινά V14.0.4D')){console.error('README heading mismatch');process.exit(1)}
-if(!pkg.includes('14.0.4-d')){console.error('Package version mismatch');process.exit(1)}
+if(!manifest.includes('14.0.4F')){console.error('Manifest version query missing');process.exit(1)}
+if(!sw.includes("const CACHE_NAME='gta-v14-0-4f-ka-sun-icon'")){console.error('Service worker cache mismatch');process.exit(1)}
+if(!readme.includes('# Καθημερινά V14.0.4F')){console.error('README heading mismatch');process.exit(1)}
+if(!pkg.includes('14.0.4-f')){console.error('Package version mismatch');process.exit(1)}
 const forbidden=["APP_VERSION='V15",'gta-v15','V15.6','V15.0C'];
 const bad=forbidden.filter(x=>html.includes(x)||sw.includes(x)||pkg.includes(x));
 if(bad.length){console.error('Unwanted V15 labels remain:',bad.join(', '));process.exit(1)}
 const script=html.split('<script>')[1].split('</script>')[0];
-fs.writeFileSync('/tmp/kathimerina-v1404d.js',script);
-try{execSync('node --check /tmp/kathimerina-v1404d.js',{stdio:'pipe'})}catch(e){console.error('SYNTAX ERROR:\n'+e.stderr.toString().slice(0,2000));process.exit(1)}
-console.log('Καθημερινά V14.0.4D Unknown Words smoke test passed.');
+fs.writeFileSync('/tmp/kathimerina-v1404f.js',script);
+try{execSync('node --check /tmp/kathimerina-v1404f.js',{stdio:'pipe'})}catch(e){console.error('SYNTAX ERROR:\n'+e.stderr.toString().slice(0,2000));process.exit(1)}
+console.log('Καθημερινά V14.0.4F Κα + Sun Icon smoke test passed.');

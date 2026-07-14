@@ -1,6 +1,6 @@
-# Καθημερινά V14.0.4D — Unknown Words + Post-Answer Review Queue
+# Καθημερινά V14.0.4F — New Κα + Sun App Icon Pack
 
-Stable V14.0.4C baseline plus a focused post-answer learning review layer.
+Stable V14.0.4E baseline plus the new branded Κα + sun app icon pack.
 
 ## What changed from V14.0.4C
 
@@ -25,4 +25,25 @@ This build stays on the stable pre-Kumon V14 line. It does not reintroduce V15 r
 
 ## Version
 
-V14.0.4D
+V14.0.4F
+
+
+## V14.0.4F — Soft Review Gate + Fresh Path Start
+
+- Weak spots and unknown words are review recommendations, not hard locks.
+- Start Today’s Path always starts a fresh guided path.
+- Completed sessions no longer make the blue button appear clickable but do nothing.
+- 20/30/45/60 minute choices are preserved.
+
+
+## V14.0.4F — New Κα + Sun App Icon Pack
+
+This build preserves the working V14.0.4E app and replaces the PWA/home-screen icons with the new deep-blue Κα + gold sun icon.
+
+Updated icon files:
+- `icon-192.png`
+- `icon-512.png`
+- `apple-touch-icon.png`
+- `kathimerina-tile-1024.png`
+
+No navigation, worksheet, Library, or Review logic was changed.
