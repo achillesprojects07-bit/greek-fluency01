@@ -1,5 +1,26 @@
-const CACHE_NAME='gta-v14-0-4f-ka-sun-icon';
+const CACHE_NAME='gta-v14-0-5-stable-learning-path';
 const APP_SHELL=['./','./index.html','./manifest.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./kathimerina-tile-1024.png'];
-self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(APP_SHELL))) });
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('gta-')&&k!==CACHE_NAME).map(k=>caches.delete(k)))));self.clients.claim()});
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const url=new URL(e.request.url);if(url.pathname.endsWith('/index.html')||url.pathname.endsWith('/')){e.respondWith(fetch(e.request,{cache:'no-store'}).then(r=>{let copy=r.clone();caches.open(CACHE_NAME).then(c=>c.put('./index.html',copy));return r}).catch(()=>caches.match('./index.html')));return}e.respondWith(fetch(e.request).then(r=>{let copy=r.clone();caches.open(CACHE_NAME).then(c=>c.put(e.request,copy));return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))))});
+self.addEventListener('install',event=>{
+  self.skipWaiting();
+  event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL.map(url=>new Request(url,{cache:'reload'})))));
+});
+self.addEventListener('activate',event=>{
+  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('gta-')&&key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));
+});
+self.addEventListener('fetch',event=>{
+  if(event.request.method!=='GET')return;
+  const url=new URL(event.request.url);
+  if(url.origin!==self.location.origin)return;
+  const isDocument=event.request.mode==='navigate'||event.request.destination==='document'||url.pathname.endsWith('/index.html')||url.pathname.endsWith('/');
+  if(isDocument){
+    event.respondWith(fetch(event.request,{cache:'no-store'}).then(response=>{
+      if(response&&response.ok){const copy=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put('./index.html',copy));}
+      return response;
+    }).catch(()=>caches.match('./index.html')));
+    return;
+  }
+  event.respondWith(fetch(event.request,{cache:'no-store'}).then(response=>{
+    if(response&&response.ok){const copy=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(event.request,copy));}
+    return response;
+  }).catch(()=>caches.match(event.request)));
+});
