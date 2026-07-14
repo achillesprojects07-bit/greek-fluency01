@@ -1,6 +1,6 @@
 # Καθημερινά V14.0.6 — Review-First Continuous Fluency
 
-A small, stable extension of V14.0.5. This remains on the V14 line and preserves exactly:
+A small, stable extension of V14.0.5. This remains on the V14 line and  preserves exactly:
 
 ```js
 const LS='gta_v12_state'
