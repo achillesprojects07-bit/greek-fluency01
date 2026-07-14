@@ -1,4 +1,4 @@
-const CACHE_NAME='gta-v14-0-5-stable-learning-path';
+const CACHE_NAME='gta-v14-0-6-continuous-fluency';
 const APP_SHELL=['./','./index.html','./manifest.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./kathimerina-tile-1024.png'];
 self.addEventListener('install',event=>{
   self.skipWaiting();
