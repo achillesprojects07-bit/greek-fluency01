@@ -1,50 +1,39 @@
-# Καθημερινά V14.0.6 — Review-First Continuous Fluency
+# Καθημερινά V14.0.8
 
-A  small, stable extension of V14.0.5. This remains on the V14 line and  preserves exactly:
+## Extensive first curriculum — stable V14 architecture
 
-```js
-const LS='gta_v12_state'
-```
+V14.0.8 expands the first roadmap from 25 broad concept steps to **107 real lessons across 12 levels** without rebuilding the app or introducing V15-style weight.
 
-## First learning path
+### Learning structure
 
-Today → exact Library lesson → matching Worksheet → grade → English/choice/glossary reveal → optional Review.
+Every lesson follows the same stable route:
 
-The seven later article and plural concepts use a **soft sequence**. Each next lesson opens after one graded worksheet in the preceding concept. A weak score creates Review work but never blocks the next concept.
+Today → exact Library lesson → study 12 models → immediate 12-question worksheet → final English/translation reveal → optional Review → next lesson.
 
-## After the first path
+- One graded worksheet softly opens the next sequential lesson.
+- Weak scores, mistakes, and unknown words go to Review but never block progress.
+- Continuous Fluency Mode begins only after all 107 lessons have at least one graded worksheet.
+- Level 0 keeps the corrected deep pronunciation lessons and unique question banks.
+- Levels 1–11 reuse the existing phrase, vocabulary, and grammar data through lightweight lesson definitions rather than duplicating the full content dataset.
+- Grammar source entries that are not marked verified retain a visible **Needs tutor verification** badge.
 
-When all 25 concepts have at least one graded worksheet, Today changes to **Continuous Fluency Mode** rather than restarting Lesson 1.
+### Estimated first-pass size
 
-When weak or unknown items are waiting, the app recommends a five-item warm-up and shows two real actions:
+- 107 lessons
+- 12 study models per lesson
+- 12 standard worksheet questions per lesson
+- approximately 28–40 hours for one first pass, depending on speaking repetition and Review
 
-- **Review now**
-- **Continue anyway**
+### Preserved
 
-Review is supportive, not a hard gate.
+- `const LS='gta_v12_state'`
+- Today / Levels / Library / Worksheets / Review tabs
+- Greek-first worksheets and post-grade English reveal
+- optional Review gate
+- Continuous Fluency Mode after roadmap completion
+- network-first document loading with offline fallback
+- Κα + gold sun icons
 
-## Balanced Daily Fluency Cycle
+### Safe deployment
 
-Each 12-question continuing worksheet targets:
-
-- **25% Review** — up to three weak or unknown items;
-- **50% Mixed retention** — older studied material;
-- **25% Application** — listening-based phrases followed by speaking practice.
-
-When fewer than three review items exist, the unused spaces become mixed-retention questions. English meanings remain hidden until the entire worksheet is graded.
-
-## V14.0.6 changes
-
-- Added soft sequential access to the seven previously unreachable article/plural concepts.
-- Defined first-path completion as covering every concept with at least one graded worksheet, not strict mastery.
-- Added a real optional five-item review warm-up.
-- Added **Continue anyway** from Today, Worksheets, Review, and the warm-up itself.
-- Added a balanced 3/6/3 continuing fluency worksheet when review items are available.
-- Added Greek-first review questions and post-grade English/choice/glossary reveal.
-- Added continuing fluency session, warm-up, and review-skip records to the existing state.
-- Kept Levels as roadmap, Library as study, Worksheets as answering, and Review as optional maintenance.
-- Updated cache safely to `gta-v14-0-6-continuous-fluency`.
-
-## Stability boundary
-
-No V15 rebuild, no complicated router, no heavy mastery lock, no weak-spot blocking, no state-key change, and no Library/Worksheet loop back to Today.
+Upload all release files together. The cache name is `gta-v14-0-8-extensive-curriculum`, and the manifest starts at `index.html?v=14.0.8`. Existing progress remains under `gta_v12_state`.
